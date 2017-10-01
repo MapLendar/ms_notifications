@@ -5,11 +5,12 @@ development:
     default:
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
-      database: ms_visualization_development
+      database: ms_notifications_db
       # Provides the hosts the default client can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
-        - localhost:27017
+        #- 181.49.78.116/32
+         - 192.168.99.101:4007
       options:
         # Change the default write concern. (default = { w: 1 })
         # write:
@@ -148,9 +149,9 @@ development:
 test:
   clients:
     default:
-      database: ms_visualization_test
+      database: ms_notifications_db
       hosts:
-        - localhost:27017
+        - ms_notifications_db:4007
       options:
         read:
           mode: :primary

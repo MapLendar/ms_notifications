@@ -9,8 +9,8 @@ development:
       # Provides the hosts the default client can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
-        #- 181.49.78.116/32
          - 192.168.99.101:4007
+         #- localhost:27017
       options:
         # Change the default write concern. (default = { w: 1 })
         # write:
@@ -151,7 +151,7 @@ test:
     default:
       database: ms_notifications_db
       hosts:
-        - ms_notifications_db:4007
+        - ms_notifications_db:27017
       options:
         read:
           mode: :primary

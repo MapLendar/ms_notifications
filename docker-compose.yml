@@ -1,23 +1,26 @@
 version: '2'
 services:
   ms_notifications_db:
-   image: mongo:latest
-   container_name: "rancher-node1"
-
+   image:  mongo:3.0.14
+   command: mongod --smallfiles  --quiet
    environment:
-    - MONGO_DATA_DIR=/data/db
+    - RAILS_ENV=production
+    - RACK_ENV=production
    
-   volumes:
-    - ./data/db:/data/db
    ports:
-     - "4007:4007"
-   command: mongod --smallfiles  --profile 2  # --quiet
+     - "4007:27017"
+   
 
   ms_notifications:
-   build: .
-   command: bash -c " rm -f tmp/pids/server.pid && bundle
-    exec rails db:migrate && bundle exec rails s -p 3007 -b '0.0.0.0'"
+   depends_on:
+     - ms_notifications_db
+   build: .   
    ports:
     - "3007:3007"
-   depends_on:
-    - ms_notifications_db
+   volumes: 
+      - '.:/app'
+   command: bash -c " rm -f tmp/pids/server.pid && bundle
+    exec rails db:migrate && bundle exec rails s -p 3007 -b '0.0.0.0'"
+
+volumes:
+  ms_notifications_db:

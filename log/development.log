@@ -3366,10 +3366,10 @@ MONGODB | Server localhost:27017 initializing.
 MONGODB | Topology type 'unknown' changed to type 'single'.
 MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
 MONGODB | There was a change in the members of the 'single' topology.
-MONGODB | localhost:27017 | ms_notifications_db.find | STARTED | {"find"=>"notifications", "filter"=>{"email"=>"gerardo@paes.com"}}
-MONGODB | localhost:27017 | ms_notifications_db.find | SUCCEEDED | 0.0009175650000000001s
-MONGODB | localhost:27017 | ms_notifications_db.find | STARTED | {"find"=>"notifications", "filter"=>{"email"=>"gerardo@paes.com"}}
-MONGODB | localhost:27017 | ms_notifications_db.find | SUCCEEDED | 0.000310541s
+MONGODB | localhost:27017 | ms-notifications-db.find | STARTED | {"find"=>"notifications", "filter"=>{"email"=>"gerardo@paes.com"}}
+MONGODB | localhost:27017 | ms-notifications-db.find | SUCCEEDED | 0.0009175650000000001s
+MONGODB | localhost:27017 | ms-notifications-db.find | STARTED | {"find"=>"notifications", "filter"=>{"email"=>"gerardo@paes.com"}}
+MONGODB | localhost:27017 | ms-notifications-db.find | SUCCEEDED | 0.000310541s
 Completed 200 OK in 90ms (Views: 1.0ms)
 
 
@@ -3413,18 +3413,18 @@ Completed 422 Unprocessable Entity in 112ms (Views: 0.6ms)
 Started POST "/new" for 127.0.0.1 at 2017-09-26 09:26:22 -0500
 Processing by NotificationsController#create as */*
   Parameters: {"event_name"=>"Jairo", "event_date"=>"1990-9-8", "event_time"=>"1998-8-9", "email"=>"misus@jsus.com", "notification"=>{"event_name"=>"Jairo", "event_date"=>"1990-9-8", "event_time"=>"1998-8-9", "email"=>"misus@jsus.com"}}
-MONGODB | localhost:27017 | ms_notifications_db.insert | STARTED | {"insert"=>"notifications", "documents"=>[{"_id"=>BSON::ObjectId('59ca638e992e750f107af3dc'), "event_name"=>"Jairo", "event_date"=>1990-09-08 00:00:00 UTC, "email"=>"misus@jsus.com", "event_time"=>1998-08-09 00:00:00 UTC}], "ordered"=>true}
-MONGODB | localhost:27017 | ms_notifications_db.insert | SUCCEEDED | 0.379434532s
+MONGODB | localhost:27017 | ms-notifications-db.insert | STARTED | {"insert"=>"notifications", "documents"=>[{"_id"=>BSON::ObjectId('59ca638e992e750f107af3dc'), "event_name"=>"Jairo", "event_date"=>1990-09-08 00:00:00 UTC, "email"=>"misus@jsus.com", "event_time"=>1998-08-09 00:00:00 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | ms-notifications-db.insert | SUCCEEDED | 0.379434532s
 Completed 201 Created in 384ms (Views: 0.7ms)
 
 
 Started GET "/notifications/by_email?email=misus@jsus.com" for 127.0.0.1 at 2017-09-26 09:26:38 -0500
 Processing by NotificationsController#by_email as */*
   Parameters: {"email"=>"misus@jsus.com"}
-MONGODB | localhost:27017 | ms_notifications_db.find | STARTED | {"find"=>"notifications", "filter"=>{"email"=>"misus@jsus.com"}}
-MONGODB | localhost:27017 | ms_notifications_db.find | SUCCEEDED | 0.000447373s
-MONGODB | localhost:27017 | ms_notifications_db.find | STARTED | {"find"=>"notifications", "filter"=>{"email"=>"misus@jsus.com"}}
-MONGODB | localhost:27017 | ms_notifications_db.find | SUCCEEDED | 0.000511169s
+MONGODB | localhost:27017 | ms-notifications-db.find | STARTED | {"find"=>"notifications", "filter"=>{"email"=>"misus@jsus.com"}}
+MONGODB | localhost:27017 | ms-notifications-db.find | SUCCEEDED | 0.000447373s
+MONGODB | localhost:27017 | ms-notifications-db.find | STARTED | {"find"=>"notifications", "filter"=>{"email"=>"misus@jsus.com"}}
+MONGODB | localhost:27017 | ms-notifications-db.find | SUCCEEDED | 0.000511169s
 Completed 200 OK in 4ms (Views: 2.2ms)
 
 
@@ -3519,8 +3519,8 @@ MONGODB | Server localhost:27017 initializing.
 MONGODB | Topology type 'unknown' changed to type 'single'.
 MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
 MONGODB | There was a change in the members of the 'single' topology.
-MONGODB | localhost:27017 | ms_notifications_db.insert | STARTED | {"insert"=>"notifications", "documents"=>[{"_id"=>BSON::ObjectId('59ceaf3f992e752cfbc9741d'), "event_name"=>"Concierto FOO", "event_date"=>1990-04-05 00:00:00 UTC, "email"=>"gerardo@paes.com", "event_time"=>2017-09-29 23:00:00 UTC}], "ordered"=>true}
-MONGODB | localhost:27017 | ms_notifications_db.insert | SUCCEEDED | 0.728408327s
+MONGODB | localhost:27017 | ms-notifications-db.insert | STARTED | {"insert"=>"notifications", "documents"=>[{"_id"=>BSON::ObjectId('59ceaf3f992e752cfbc9741d'), "event_name"=>"Concierto FOO", "event_date"=>1990-04-05 00:00:00 UTC, "email"=>"gerardo@paes.com", "event_time"=>2017-09-29 23:00:00 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | ms-notifications-db.insert | SUCCEEDED | 0.728408327s
 Completed 201 Created in 2095ms (Views: 1.3ms)
 
 
@@ -3839,8 +3839,8 @@ MONGODB | Server localhost:27017 initializing.
 MONGODB | Topology type 'unknown' changed to type 'single'.
 MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
 MONGODB | There was a change in the members of the 'single' topology.
-MONGODB | localhost:27017 | ms_notifications_db.insert | STARTED | {"insert"=>"notifications", "documents"=>[{"_id"=>BSON::ObjectId('59d1677a992e7534ac8afe16'), "event_name"=>"Jairo", "event_date"=>1990-09-08 00:00:00 UTC, "email"=>"misus@jsus.com", "event_time"=>1998-08-09 00:00:00 UTC}], "ordered"=>true}
-MONGODB | localhost:27017 | ms_notifications_db.insert | SUCCEEDED | 0.31466661599999995s
+MONGODB | localhost:27017 | ms-notifications-db.insert | STARTED | {"insert"=>"notifications", "documents"=>[{"_id"=>BSON::ObjectId('59d1677a992e7534ac8afe16'), "event_name"=>"Jairo", "event_date"=>1990-09-08 00:00:00 UTC, "email"=>"misus@jsus.com", "event_time"=>1998-08-09 00:00:00 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | ms-notifications-db.insert | SUCCEEDED | 0.31466661599999995s
 Completed 201 Created in 1211ms (Views: 1.1ms)
 
 
@@ -3853,8 +3853,8 @@ MONGODB | Server localhost:27017 initializing.
 MONGODB | Topology type 'unknown' changed to type 'single'.
 MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
 MONGODB | There was a change in the members of the 'single' topology.
-MONGODB | localhost:27017 | ms_notifications_db.insert | STARTED | {"insert"=>"notifications", "documents"=>[{"_id"=>BSON::ObjectId('59d16b71992e753660baccfe'), "event_name"=>"Jairo", "event_date"=>1990-09-08 00:00:00 UTC, "email"=>"misus@jsus.com", "event_time"=>1998-08-09 00:00:00 UTC}], "ordered"=>true}
-MONGODB | localhost:27017 | ms_notifications_db.insert | SUCCEEDED | 0.25064678900000004s
+MONGODB | localhost:27017 | ms-notifications-db.insert | STARTED | {"insert"=>"notifications", "documents"=>[{"_id"=>BSON::ObjectId('59d16b71992e753660baccfe'), "event_name"=>"Jairo", "event_date"=>1990-09-08 00:00:00 UTC, "email"=>"misus@jsus.com", "event_time"=>1998-08-09 00:00:00 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | ms-notifications-db.insert | SUCCEEDED | 0.25064678900000004s
 Completed 201 Created in 1543ms (Views: 0.9ms)
 
 

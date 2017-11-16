@@ -3082,12 +3082,12 @@ puma (3.10.0) lib/puma/server.rb:301:in `block in run'
 puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started POST "/notifications" for 127.0.0.1 at 2017-09-25 21:38:45 -0500
   
-SyntaxError (/home/miguel/Documents/Arquitectura/micro/ms_notifications/app/controllers/notifications_controller.rb:76: syntax error, unexpected keyword_end, expecting end-of-input):
+SyntaxError (/home/miguel/Documents/Arquitectura/micro/ms-notifications/app/controllers/notifications_controller.rb:76: syntax error, unexpected keyword_end, expecting end-of-input):
   
 app/controllers/notifications_controller.rb:76: syntax error, unexpected keyword_end, expecting end-of-input
 Started POST "/notifications" for 127.0.0.1 at 2017-09-25 21:41:28 -0500
   
-SyntaxError (/home/miguel/Documents/Arquitectura/micro/ms_notifications/app/controllers/notifications_controller.rb:1: class/module name must be CONSTANT
+SyntaxError (/home/miguel/Documents/Arquitectura/micro/ms-notifications/app/controllers/notifications_controller.rb:1: class/module name must be CONSTANT
 lass notificationsController < ApplicationController
                               ^):
   
@@ -3258,28 +3258,28 @@ MONGODB | Server localhost:27017 initializing.
 MONGODB | Topology type 'unknown' changed to type 'single'.
 MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
 MONGODB | There was a change in the members of the 'single' topology.
-MONGODB | localhost:27017 | ms_notifications.insert | STARTED | {"insert"=>"notifications", "documents"=>[{"_id"=>BSON::ObjectId('59c9fa9e992e75167804717a'), "event_name"=>"Concierto FOO", "event_date"=>1990-04-05 00:00:00 UTC, "email"=>"gerardo@paes.com", "event_time"=>2017-09-26 23:00:00 UTC}], "ordered"=>true}
-MONGODB | localhost:27017 | ms_notifications.insert | SUCCEEDED | 0.383786943s
+MONGODB | localhost:27017 | ms-notifications.insert | STARTED | {"insert"=>"notifications", "documents"=>[{"_id"=>BSON::ObjectId('59c9fa9e992e75167804717a'), "event_name"=>"Concierto FOO", "event_date"=>1990-04-05 00:00:00 UTC, "email"=>"gerardo@paes.com", "event_time"=>2017-09-26 23:00:00 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | ms-notifications.insert | SUCCEEDED | 0.383786943s
 Completed 201 Created in 433ms (Views: 0.7ms)
 
 
 Started GET "/notifications/by_email?email=gerardo@paes.com" for 127.0.0.1 at 2017-09-26 01:58:45 -0500
 Processing by NotificationsController#by_email as */*
   Parameters: {"email"=>"gerardo@paes.com"}
-MONGODB | localhost:27017 | ms_notifications.find | STARTED | {"find"=>"notifications", "filter"=>{"email"=>"gerardo@paes.com"}}
-MONGODB | localhost:27017 | ms_notifications.find | SUCCEEDED | 0.000464379s
-MONGODB | localhost:27017 | ms_notifications.find | STARTED | {"find"=>"notifications", "filter"=>{"email"=>"gerardo@paes.com"}}
-MONGODB | localhost:27017 | ms_notifications.find | SUCCEEDED | 0.000397725s
+MONGODB | localhost:27017 | ms-notifications.find | STARTED | {"find"=>"notifications", "filter"=>{"email"=>"gerardo@paes.com"}}
+MONGODB | localhost:27017 | ms-notifications.find | SUCCEEDED | 0.000464379s
+MONGODB | localhost:27017 | ms-notifications.find | STARTED | {"find"=>"notifications", "filter"=>{"email"=>"gerardo@paes.com"}}
+MONGODB | localhost:27017 | ms-notifications.find | SUCCEEDED | 0.000397725s
 Completed 200 OK in 5ms (Views: 2.7ms)
 
 
 Started GET "/notifications/by_email?email=gerardo@paes.com" for 127.0.0.1 at 2017-09-26 01:59:01 -0500
 Processing by NotificationsController#by_email as */*
   Parameters: {"email"=>"gerardo@paes.com"}
-MONGODB | localhost:27017 | ms_notifications.find | STARTED | {"find"=>"notifications", "filter"=>{"email"=>"gerardo@paes.com"}}
-MONGODB | localhost:27017 | ms_notifications.find | SUCCEEDED | 0.000468911s
-MONGODB | localhost:27017 | ms_notifications.find | STARTED | {"find"=>"notifications", "filter"=>{"email"=>"gerardo@paes.com"}}
-MONGODB | localhost:27017 | ms_notifications.find | SUCCEEDED | 0.000397742s
+MONGODB | localhost:27017 | ms-notifications.find | STARTED | {"find"=>"notifications", "filter"=>{"email"=>"gerardo@paes.com"}}
+MONGODB | localhost:27017 | ms-notifications.find | SUCCEEDED | 0.000468911s
+MONGODB | localhost:27017 | ms-notifications.find | STARTED | {"find"=>"notifications", "filter"=>{"email"=>"gerardo@paes.com"}}
+MONGODB | localhost:27017 | ms-notifications.find | SUCCEEDED | 0.000397742s
 Completed 200 OK in 3ms (Views: 1.3ms)
 
 

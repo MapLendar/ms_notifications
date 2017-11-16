@@ -22,4 +22,3 @@ services:
 volumes:
   notifications:
     driver: local
-    external: true

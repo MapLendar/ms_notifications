@@ -1,6 +1,6 @@
 FROM ruby:2.4.2
 RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs
-ENV ms-notifications /app
+ENV ms-notifications /notifications
 RUN mkdir /ms-notifications
 WORKDIR /ms-notifications
 COPY . /ms-notifications

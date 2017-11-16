@@ -1,3 +1,5 @@
 version: '2'
-sa-ms-notifications:
-  scale:1
+ms-notifications-db:
+  scale: 1
+ms-notifications:
+  scale: 1

@@ -1,5 +1,8 @@
 version: '2'
-ms-notifications-db:
-  scale: 1
-ms-notifications:
-  scale: 1
+services:
+  ms-notifications-db:
+    scale: 1
+    start_on_create: true
+  ms-notifications:
+    scale: 1
+    start_on_create: true
